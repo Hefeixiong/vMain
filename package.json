@@ -2,9 +2,13 @@
   "name": "vmain",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite --mode serve-dev --host",
+    "test": "vite --mode serve-test --host",
+    "build:test": "vite build --mode  build-test",
+    "build": "vite build --mode build",
+    "preview": "yarn run build && vite preview ",
+    "lint": "eslint --ext .js,.jsx,.vue,.ts,.tsx src --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "3.2.26"
@@ -18,6 +22,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-vue": "8.1.1",
 
+    "husky": "7.0.2",
     "prettier": "2.2.1",
 
     "@vitejs/plugin-vue": "1.10.2",
