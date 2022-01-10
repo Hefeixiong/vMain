@@ -1,6 +1,6 @@
 <template>
   <div class="layout-wrapper">
-  <Sidebar/>
+  <Sidebar class="sidebar-container"/>
     <div class="main-container">
       <Navbar/>
       <AppMain/>
@@ -14,5 +14,23 @@ import {Sidebar, AppMain , Navbar} from './components'
 </script>
 
 <style lang="scss" scoped>
-
+.main-container {
+  min-height: 100%;
+  transition: margin-left 0.28s;
+  margin-left: $sideBarWidth;
+  position: relative;
+}
+.sidebar-container {
+  transition: width 0.28s;
+  width: $sideBarWidth !important;
+  background-color: $menuBg;
+  height: 100%;
+  position: fixed;
+  font-size: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  overflow: hidden;
+}
 </style>
