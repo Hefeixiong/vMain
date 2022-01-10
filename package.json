@@ -18,11 +18,7 @@
     "vuex": "4.0.2"
   },
   "devDependencies": {
-
     "@types/node": "15.0.1",
-
-
-
     "@typescript-eslint/eslint-plugin": "5.5.0",
     "@typescript-eslint/parser": "5.5.0",
     "@vitejs/plugin-vue": "1.10.2",
@@ -34,6 +30,9 @@
     "eslint-plugin-vue": "8.1.1",
     "husky": "7.0.2",
     "prettier": "2.2.1",
+    "sass": "1.32.12",
+    "unplugin-auto-import": "^0.5.5",
+    "unplugin-vue-components": "^0.17.11",
     "vite": "2.7.3"
   }
 }
