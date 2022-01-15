@@ -1,6 +1,7 @@
-import {resolve} from 'path';
+import path,{resolve} from 'path';
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import viteSvgIcons from 'vite-plugin-svg-icons'
 
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -16,6 +17,12 @@ export default defineConfig(({command , mode}: any) =>{
       }),
       Components({
         resolvers: [ElementPlusResolver()],
+      }),
+      viteSvgIcons({
+        // config svg dir that can config multi
+        iconDirs: [path.resolve(process.cwd(), 'src/icons/common'), path.resolve(process.cwd(), 'src/icons/nav-bar')],
+        // appoint svg icon using mode
+        symbolId: 'icon-[dir]-[name]'
       }),
     ],
     resolve: {
